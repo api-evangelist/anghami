@@ -1,23 +1,72 @@
 aid: anghami
+
 name: Anghami
-description: 'Anghami is a company surfaced via the API Evangelist harvest backlog (source: music) and
-  added to the network as a stub for full-pipeline profiling.'
+
+description: 'Anghami is a leading music streaming platform in the Middle East and North Africa, offering a vast library of songs, podcasts, and curated playlists. Users can enjoy personalized recommendations, high‑quality audio, and offline listening across multiple devices. The service provides both free ad‑supported and premium subscription tiers, catering to a diverse audience of music lovers and creators.'
+
 url: https://raw.githubusercontent.com/api-evangelist/anghami/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:music
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-23 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-23'
+
 modified: '2026-09-23'
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI, AsyncAPI, GraphQL, or other contract files were found at the API host.
+  evidence:
+    - url: https://api.anghami.com/openapi.json
+      status: 204
+  checked: 2026-09-23
+
 tags:
-- Company
-apis: []
+- Music
+- Streaming
+- Middle-East
+- North-Africa
+- Entertainment
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/anghami-hosts.yml
+- type: Vendors
+  url: vendors/anghami-vendors.yml
+- type: SDKs
+  url: packages/anghami-packages.yml
+- type: Packages
+  url: packages/anghami-packages.yml
+- type: Newsroom
+  url: https://www.anghami.com/press
+- type: GitHubOrganization
+  url: https://github.com/anghami
+- type: DomainSecurity
+  url: security/anghami-domain-security.yml
 - type: Website
-  url: https://anghami.com/
+  url: https://www.anghami.com/
+- type: Support
+  url: https://support.anghami.com/hc/en-us
+- type: TermsOfService
+  url: https://www.anghami.com/legal
+
+apis: []
+x-enrichment:
+  date: '2026-09-23'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
